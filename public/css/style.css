@@ -1,41 +1,13 @@
-/*-----------------------------------------------------------------------------------
+@font-face {
+  src: url("../fonts/Montserrat-Black.ttf");
+  font-family: "Montserrat";
+}
 
-    Template Name: Unfold - Personal Resume & CV Template
-    Template URI: site.com
-    Description: Unfold Personal Resume & CV Template
-    Author: Uideck
-    Author URI: https://uideck.com/
-    Support: https://uideck.com/support/
-    Version: 1.0
-
------------------------------------------------------------------------------------
-
-    CSS INDEX
-    ===================
-
-    1.COMMON
-	2.HEADER
-    3.ABOUT
-    4.SERVICES
-    4.CALL TO ACTION
-    5.WORK
-    6.PRICING
-    7.BLOG
-    8.CONTACT
-    9.FOOTER
-    10.PAGE BANNER
-    10.SINGLE BLOG PAGE
-
------------------------------------------------------------------------------------*/
-/*===========================
-    1. COMMON css 
-===========================*/
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800");
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #8a8fa3; }
+  color: #0c1013; }
 
 * {
   margin: 0;
@@ -69,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: #32333c;
   margin: 0px; }
@@ -179,7 +151,7 @@ p {
   height: 100%;
   width: 100%;
   /* Change Background Color */
-  background: #fff;
+  background: #ffffff;
   z-index: 99999; }
   .preloader .loader_34 {
     display: table-cell;
@@ -235,13 +207,13 @@ p {
       height: 100%;
       border-style: solid;
       /* Spinner Color */
-      border-color: #754ef9 #754ef9 #ddd;
+      border-color: #ffd200 #ffd200 #f3f3f9;
       border-radius: 50%;
       border-width: 6px; }
     .preloader .loader_34 .ytp-spinner-left .ytp-spinner-circle {
       left: 0;
       right: -100%;
-      border-right-color: #ddd;
+      border-right-color: #f3f3f9;
       -webkit-animation: ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
       -moz-animation: ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
       -o-animation: ytp-spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
@@ -249,7 +221,7 @@ p {
     .preloader .loader_34 .ytp-spinner-right .ytp-spinner-circle {
       left: -100%;
       right: 0;
-      border-left-color: #ddd;
+      border-left-color: #f3f3f9;
       -webkit-animation: ytp-right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
       -moz-animation: ytp-right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
       -o-animation: ytp-right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
