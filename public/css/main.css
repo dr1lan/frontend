@@ -108,6 +108,10 @@ p {
     background: #f3f3f9;
 }
 
+.mt-50 {
+    margin-top: 50px;
+}
+
 @media (max-width: 767px) {
     p {
         font-size: 15px;
@@ -317,6 +321,12 @@ p {
         padding-top: 70px;
         padding-bottom: 80px;
     }
+}
+
+.functional-content .functional-title {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 15px;
 }
 
 /*===== description =====*/
