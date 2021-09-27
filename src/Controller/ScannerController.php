@@ -7,6 +7,7 @@ namespace App\Controller;
 use App\Service\ScannerService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -28,8 +29,16 @@ class ScannerController extends AbstractController
     {
         $domain = $request->get('url');
 
-        $this->scannerService->runScan($domain);
+        $report = $this->scannerService->runScan($domain);
 
-        return new JsonResponse();
+        return new JsonResponse(['report' => $report]);
+    }
+
+    #[Route(path: '/report', name: 'report', methods: 'POST')]
+    public function report(Request $request): Response
+    {
+        $report = $request->get('report');
+
+        return $this->render('landing/report/report.html.twig', ['report' => $report]);
     }
 }

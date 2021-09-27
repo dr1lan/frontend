@@ -8,6 +8,9 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (response) {
                console.log(response)
+              $.redirect('/report', {
+                  report: response.report
+              })
             },
             error: function (error) {
                console.log(error)
