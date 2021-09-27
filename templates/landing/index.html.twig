@@ -1,131 +1,50 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Scanner</title>
-    <link rel="shortcut icon" href="{{ asset('images/favicon.svg') }}" type="image/png">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-</head>
-<body>
+{% extends 'landing/base.html.twig' %}
 
-<!--====== HEADER ======-->
-<header id="home" class="header-area">
-    <div class="navigation fixed-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg">
-                        <img src="{{ asset('images/logo.png') }}" alt="Logo">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="toggler-icon"></span>
-                            <span class="toggler-icon"></span>
-                            <span class="toggler-icon"></span>
-                        </button>
+{% block title %}Главная{% endblock %}
 
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active"><a class="page-scroll" href="#scanner">Сканировать</a></li>
-                                <li class="nav-item"><a class="page-scroll" href="#description">Описание решаемых
-                                        проблем</a></li>
-                                <li class="nav-item"><a class="page-scroll" href="#possibilities">Возможности
-                                        продукта</a></li>
-                                <li class="nav-item"><a class="page-scroll" href="#contacts">Контактная форма</a></li>
-                            </ul>
-                        </div>
-                    </nav>
+{% block header %}
+    <header id="home" class="header-area">
+        <div class="navigation fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <img src="{{ asset('images/logo.png') }}" alt="Logo">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active"><a class="page-scroll" href="#scanner">Сканировать</a>
+                                    </li>
+                                    <li class="nav-item"><a class="page-scroll" href="#description">Описание решаемых
+                                            проблем</a></li>
+                                    <li class="nav-item"><a class="page-scroll" href="#possibilities">Возможности
+                                            продукта</a></li>
+                                    <li class="nav-item"><a class="page-scroll" href="#contacts">Контактная форма</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
-<!--====== HEADER ENDS ======-->
+    </header>
+{% endblock %}
 
-<!--====== FUNCTIONAL PART ======-->
-{% include 'landing/blocks/functional.html.twig' %}
-<!--====== FUNCTIONAL PART ENDS ======-->
+{% block content %}
+    {% include 'landing/blocks/functional.html.twig' %}
 
-<!--====== DESCRIPTIONS PART ======-->
-{% include 'landing/blocks/description.html.twig' %}
-<!--====== DESCRIPTIONS PART ENDS ======-->
+    {% include 'landing/blocks/description.html.twig' %}
 
-<!--====== POSSIBILITIES PART ======-->
-{% include 'landing/blocks/possibilities.html.twig' %}
-<!--====== POSSIBILITIES PART ENDS ======-->
+    {% include 'landing/blocks/possibilities.html.twig' %}
 
-<!--====== CONTACT PART ======-->
-{% include 'landing/blocks/contacts.html.twig' %}
-<!--====== CONTACT PART ENDS ======-->
+    {% include 'landing/blocks/contacts.html.twig' %}
 
-<!--====== FOOTER PART START ======-->
-<footer id="footer" class="footer-area">
-    <div class="footer-widget pt-130 pb-130">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="footer-content text-center">
-                        <img src="{{ asset('images/logo2.png') }}" alt="Logo">
-                        <p class="mt-">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            inci- didunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exe-
-                            rcitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <ul>
-                            <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
-                            <li><a href="#"><i class="lni-twitter-original"></i></a></li>
-                            <li><a href="#"><i class="lni-pinterest"></i></a></li>
-                            <li><a href="#"><i class="lni-linkedin-original"></i></a></li>
-                        </ul>
-                    </div> <!-- footer content -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </div> <!-- footer widget -->
-    <div class="footer-copyright pb-20">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="copyright-text text-center pt-20">
-                        <p>Copyright © 2021.</p>
-                    </div> <!-- copyright text -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </div> <!-- footer widget -->
-</footer>
-<!--====== FOOTER PART ENDS ======-->
-
-<!--====== jquery js ======-->
-<script src="{{ asset('js/vendor/modernizr-3.6.0.min.js') }}"></script>
-<script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }}"></script>
-
-<!--====== Bootstrap js ======-->
-<script src="{{ asset('js/bootstrap.min.js') }}"></script>
-{#<script src="{{ asset('js/popper.min.js') }}"></script>#}
-
-<!--====== Parallax js ======-->
-{#<script src="{{ asset('js/parallax.min.js') }}"></script>#}
-
-<!--====== Counter Up js ======-->
-{#<script src="{{ asset('js/waypoints.min.js') }}"></script>#}
-{#<script src="{{ asset('js/jquery.counterup.min.js') }}"></script>#}
-
-<!--====== Appear js ======-->
-{#<script src="{{ asset('js/jquery.appear.min.js') }}"></script>#}
-
-<!--====== Scrolling js ======-->
-<script src="{{ asset('js/scrolling-nav.js') }}"></script>
-<script src="{{ asset('js/scrolling-nav.js') }}"></script>
-
-<script src="{{ asset('js/jquery.redirect.js') }}"></script>
-
-<!--====== Main js ======-->
-<script src="{{ asset('js/main.js') }}"></script>
-<script src="{{ asset('js/general.js') }}"></script>
-
-</body>
-
-</html>
+{% endblock %}
