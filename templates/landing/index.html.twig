@@ -3,34 +3,131 @@
 {% block title %}Главная{% endblock %}
 
 {% block header %}
-    <header id="home" class="header-area">
-        <div class="navigation fixed-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
-                            <img src="{{ asset('images/logo.png') }}" alt="Logo">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item active"><a class="page-scroll" href="#scanner">Сканировать</a>
-                                    </li>
-                                    <li class="nav-item"><a class="page-scroll" href="#description">Описание решаемых
-                                            проблем</a></li>
-                                    <li class="nav-item"><a class="page-scroll" href="#possibilities">Возможности
-                                            продукта</a></li>
-                                    <li class="nav-item"><a class="page-scroll" href="#contacts">Контактная форма</a>
-                                    </li>
-                                </ul>
+    <header class="b-stripe b-stripe_content_header">
+        <div class="b-stripe__in">
+            <!-- mobile -->
+            <div class="b-stripe b-stripe_content_mheader">
+                <div class="b-stripe b-stripe_content_mheader">
+                    <div class="b-stripe__in">
+                        <div class="b-content-columns b-content-columns_content_mheader">
+                            <div class="b-content-column b-content-column_layout_a">
+                                <div class="b-content-column__in">
+                                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="b-logo__image">
+                                </div>
                             </div>
-                        </nav>
+
+                            <div class="b-content-column b-content-column_layout_d">
+                                <div class="b-content-column__in">
+                                    <div class="b-content-columns b-content-columns_content_fast-access">
+                                        <div class="b-content-column b-content-column_layout_b">
+                                            <div class="b-content-column__in">
+                                                <div class="b-wrapper-hamburger">
+                                                    <div class="b-nav-icon b-nav-icon_type_hamburger">
+                                                        <div class="b-nav-icon__item"></div>
+                                                        <div class="b-nav-icon__item"></div>
+                                                        <div class="b-nav-icon__item"></div>
+                                                        <div class="b-nav-icon__item"></div>
+                                                        <div class="b-nav-icon__item"></div>
+                                                        <div class="b-nav-icon__item"></div>
+                                                        <div class="b-external-link"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="b-modal-windows">
+                            <div class="b-stripe b-stripe_content_main-menu-320 b-popup b-popup_content_main-menu-320 resise-a"
+                                 style="height: 869px;">
+                                <div class="b-stripe__in">
+                                    <div class="b-section b-section_content_main-menu-320">
+                                        <div class="b-section__body">
+                                            <nav class="b-menu b-menu_content_mobile">
+                                                <ul class="b-menu__list">
+                                                    <li class="b-menu__item ">
+                                                        <a class="b-menu__item-text" href="#scanner"
+                                                           title="Сканировать">
+                                                            Сканировать
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="b-menu__item ">
+                                                        <a class="b-menu__item-text" href="#description" title="Описание решаемых проблем">
+                                                            Описание решаемых проблем
+                                                        </a>
+
+
+                                                    </li>
+
+                                                    <li class="b-menu__item ">
+                                                        <a class="b-menu__item-text" href="#possibilities" title="Возможности продукта">
+                                                            Возможности продукта
+                                                        </a>
+
+                                                    </li>
+
+                                                    <li class="b-menu__item ">
+                                                        <a class="b-menu__item-text" href="#contacts" title="Контакты">
+                                                            Контакты
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- desktop -->
+            <div class="b-stripe b-stripe_content_bheader">
+                <div class="b-stripe__in">
+                    <div class="b-content-columns b-content-columns_content_section-menu">
+                        <div class="b-content-column b-content-column_layout_a">
+                            <div class="b-content-column__in">
+                                <img class="b-logo__image" src="{{ asset('images/logo.png') }}" alt="Logo">
+                            </div>
+                        </div>
+
+                        <div class="b-content-column b-content-column_layout_b">
+                            <div class="b-content-column__in">
+                                <nav class="b-menu b-menu_content_section">
+                                    <ul class="b-menu__list">
+                                        <li class="b-menu__item ">
+                                            <a class="b-menu__item-text" href="#scanner" title="Сканировать">
+                                                Сканировать
+                                            </a>
+                                        </li>
+
+                                        <li class="b-menu__item ">
+                                            <a class="b-menu__item-text" href="#description" title="Описание решаемых
+                                            проблем">
+                                                Описание решаемых проблем
+                                            </a>
+                                        </li>
+
+                                        <li class="b-menu__item ">
+                                            <a class="b-menu__item-text" href="#possibilities" title="Возможности
+                                            продукта">
+                                                Возможности продукта
+                                            </a>
+                                        </li>
+
+                                        <li class="b-menu__item ">
+                                            <a class="b-menu__item-text" href="#contacts" title="Контакты">
+                                                Контакты
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

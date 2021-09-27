@@ -1,0 +1,37 @@
+.b-stripe_content_header {
+    -moz-box-shadow: 8px 0 4px rgba(55,20,176,.12);
+    box-shadow: 8px 0 4px rgba(55,20,176,.12);
+    z-index: 99;
+}
+
+.b-stripe_content_header {
+    background: #fff;
+    transition: background ease-out .3s;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.b-stripe {
+    position: relative;
+    text-align: left;
+    margin: 0 auto;
+}
+
+header {
+    display: block;
+}
+
+.b-stripe_content_header>.b-stripe__in {
+    max-width: 100%;
+    padding: 0 0;
+}
+
+.b-stripe__in {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 48px;
+}
