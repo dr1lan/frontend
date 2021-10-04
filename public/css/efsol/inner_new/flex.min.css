@@ -1,0 +1,9 @@
+.flex{display:-webkit-box;display:-ms-flexbox;display:flex;display:-webkit-flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;align-items:stretch}.flex-just_start{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.flex-just_end{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.flex-just_center{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.flex-just_space{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.flex-align_start{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.flex-align_end{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.flex-align_center{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.flex-dir_column{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.flexWrap{display:inline-block}
+.page-recall {
+    display: none;
+}
+@media (max-width: 991px) {
+    .page-recall {
+        display: block;
+    }
+}

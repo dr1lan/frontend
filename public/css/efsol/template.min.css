@@ -1,0 +1,209 @@
+a, div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
+    -webkit-tap-highlight-color: transparent
+}
+
+.b-stripe {
+    position: relative;
+    text-align: left;
+    margin: 0 auto
+}
+
+@media screen and (min-width: 1202px) {
+    .b-stripe_content_mheader {
+        display: none
+    }
+}
+
+@media screen and (max-width: 1202px) {
+    .b-stripe_content_bheader {
+        display: none
+    }
+
+    .b-stripe_content_header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        transition: all .8s !important;
+        -webkit-transition: all .8s !important
+    }
+
+    .b-stripe_content_mheader {
+        border-bottom: none;
+        display: block;
+        position: relative
+    }
+
+    .b-stripe_content_mheader > .b-stripe__in:after {
+        content: "";
+        position: absolute;
+        background: url('../../images/efsol/header-line.svg') 0 0 no-repeat;
+        height: 60px;
+        width: 150px;
+        background-size: contain;
+        z-index: 0;
+        top: 0;
+        left: 0
+    }
+
+    .b-stripe_content_mheader > .b-stripe__in {
+        padding: 0 32px 0 32px;
+        background: #f3f3f9;
+        position: relative;
+        width: 100%;
+        max-width: 100%
+    }
+
+    .b-stripe__in {
+        padding: 0 32px
+    }
+
+    .b-content-columns_content_mheader {
+        z-index: 2;
+        position: relative
+    }
+
+    .b-content-columns_content_mheader > .b-content-column {
+        vertical-align: middle
+    }
+
+    .b-content-columns_content_mheader:after {
+        content: "";
+        display: inline-block;
+        font: 0/0 a !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        vertical-align: top;
+        visibility: hidden;
+        width: 100% !important
+    }
+
+    .b-logo__image {
+        max-width: 110px;
+        height: 50px
+    }
+}
+
+.b-stripe_content_header {
+    min-height: auto;
+    -moz-box-shadow: 8px 0 4px rgba(55, 20, 176, .12);
+    box-shadow: 8px 0 4px rgba(55, 20, 176, .12);
+    padding: 0;
+    margin: 0;
+    background: 0 0;
+    border-bottom: none;
+    background: #fff;
+    transition: background ease-out .3s;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.b-stripe_content_header > .b-stripe__in {
+    max-width: 100%;
+    padding: 0 0
+}
+
+.b-stripe__in {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 48px
+}
+
+.b-stripe_content_bheader > .b-stripe__in {
+    padding: 0 15px;
+    vertical-align: baseline
+}
+
+@media screen and (max-width: 1190px) {
+    .b-stripe__in {
+        padding: 0 32px
+    }
+}
+
+.b-content-columns_content_mheader {
+    font: 0/0 a;
+    text-align: justify;
+    text-justify: newspaper
+}
+
+.b-logo__image {
+    critical: this;
+    width: 129px;
+    height: 53px;
+    background-size: 100% auto;
+    background: url("data:image/svg+xml,%3Csvg width='451' height='186' viewBox='0 0 451 186' fill='none' xmlns='http://www.w3.org/2000/svg'%0A%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M0 184.584H54.6717V168.013H17.9392V141.103H50.4004V124.532H17.9392V102.013H53.5326V85.4424H0V184.584Z' fill='%230F0F0F' /%3E%3Cpath d='M73.8472 184.584H91.9287V141.103H124.105V123.966H91.9287V102.013H127.522V85.4424H73.8472V184.584Z' fill='%230F0F0F' /%3E%3Cpath d='M201.564 113.343C201.564 104.704 198.716 97.6226 193.164 92.2405C187.611 86.7169 180.777 84.0259 172.52 84.0259C164.404 84.0259 157.428 86.7169 151.733 91.9572C146.18 97.1975 143.333 103.854 143.333 111.644C143.19 129.631 158.567 136.996 169.957 142.52C178.072 146.485 184.621 151.867 184.621 159.232C184.621 164.472 179.353 169.429 173.089 169.429H171.523C165.116 169.429 159.848 164.331 159.848 158.241V153.708H141.767V158.241C141.767 165.889 144.614 172.404 150.309 177.927C156.147 183.309 163.123 186 171.238 186H173.516C181.631 186 188.608 183.309 194.303 177.927C199.998 172.404 202.845 165.889 202.845 158.241C202.988 139.404 187.611 130.481 175.937 125.099C167.964 120.992 161.414 116.176 161.414 110.369C161.414 104.846 166.397 100.597 172.52 100.597C178.784 100.597 183.625 106.12 183.625 113.343H201.564Z' fill='%230F0F0F' /%3E%3Cpath d='M283.742 111.345C283.742 103.697 280.894 97.1822 275.199 91.8001C269.504 86.2765 262.67 83.5854 254.555 83.5854H252.277C244.161 83.5854 237.328 86.2765 231.49 91.8001C225.795 97.1822 222.948 103.697 222.948 111.345V157.658C222.948 165.306 225.795 171.822 231.49 177.345C237.328 182.869 244.161 185.56 252.277 185.56H254.555C262.67 185.56 269.504 182.869 275.199 177.487C280.894 171.963 283.742 165.448 283.742 157.8V111.345ZM265.802 158.65C265.802 164.315 260.392 168.989 254.128 168.989H252.704C246.44 168.989 241.029 164.315 241.029 158.508V110.495C241.029 104.83 246.44 100.156 252.704 100.156H254.27C260.534 100.156 265.802 104.688 265.802 110.495V158.65Z' fill='%230F0F0F' /%3E%3Cpath d='M304.283 184.584H353.545V168.013H322.365V85.4424H304.283V184.584Z' fill='%230F0F0F' /%3E%3Cpath d='M447.153 1.28467H355.324V82.8176H447.153V1.28467Z' fill='white' /%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M450.741 0H352.712V85.9072H450.741V0ZM432.545 19.5357C435.548 22.4473 437.089 26.2783 437.089 30.9521H427.385C427.385 27.0445 424.766 24.0563 421.375 24.0563C418.066 24.0563 415.369 26.3549 415.369 29.3431C415.369 32.4845 418.913 35.0897 423.226 37.3115C429.542 40.2233 437.861 45.0501 437.783 55.2406C437.783 59.3782 436.242 62.9027 433.161 65.8909C430.079 68.8023 426.307 70.258 421.916 70.258H420.685C416.294 70.258 412.519 68.8023 409.362 65.8909C406.281 62.9027 404.74 59.3782 404.74 55.2406V52.7886H414.522V55.2406C414.522 58.5353 417.372 61.2936 420.838 61.2936H421.685C425.073 61.2936 427.923 58.6118 427.923 55.7769C427.923 51.7927 424.382 48.8813 419.991 46.7356L419.896 46.6904C413.743 43.7073 405.509 39.7146 405.587 30.0327C405.587 25.8186 407.128 22.2174 410.131 19.3825C413.213 16.5476 416.988 15.0918 421.375 15.0918C425.845 15.0918 429.542 16.5476 432.545 19.5357ZM396.292 69.4919H366.715V15.858H395.676V24.8225H376.422V37.0052H393.982V45.9695H376.422V60.5275H396.292V69.4919Z' fill='%23FFD200' /%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='451' height='186' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") no-repeat left center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.b-stripe_content_bheader {
+    display: block;
+    border-bottom: none;
+    background: #f3f3f9 url('../../images/efsol/header-line.svg') 0 0 no-repeat;
+    padding: 8px 0;
+    position: relative;
+    z-index: 99999;
+    background-size: contain
+}
+
+.b-stripe_content_bheader .b-content-column_layout_b {
+    margin-right: 0;
+    margin-left: 0
+}
+
+.b-content-columns_content_section-menu > .b-content-column {
+    vertical-align: middle
+}
+
+.b-content-columns_content_section-menu {
+    font: 0/0 a;
+    text-align: justify;
+    text-justify: newspaper;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.b-menu.b-menu_content_section .b-menu__item.current .b-menu__item-text::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: -8px;
+    background-size: cover;
+    background: #ffd200;
+    opacity: 1;
+    -webkit-transform: skew(-45deg);
+    -moz-transform: skew(-45deg);
+    -o-transform: skew(-45deg);
+    transform: skew(-45deg)
+}

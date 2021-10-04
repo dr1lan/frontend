@@ -21,7 +21,9 @@ class ScannerController extends AbstractController
     #[Route(path: '', name: 'index', methods: 'GET')]
     public function index(): Response
     {
-        return $this->render('landing/index.html.twig');
+        return $this->render('landing/index.html.twig', [
+            'year' => date('Y'),
+        ]);
     }
 
     #[Route(path: '/scan', name: 'scan', methods: 'POST')]

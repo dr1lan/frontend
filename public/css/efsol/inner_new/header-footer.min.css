@@ -1,4 +1,4 @@
-a, abbr, acronym, address, applet, b, big, blockquote, body, caption, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, object, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, u, var {
+a, abbr, acronym, address, applet, b, big, blockquote, body, caption, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, object, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, u, var {
     margin: 0;
     padding: 0;
     border: 0;
@@ -170,7 +170,7 @@ h3 b {
 footer.navbar-bottom {
     display: block;
     position: relative;
-    background: #0f0f0f url(/local/templates/inner_new/new_images/footer/foot-bg.svg) 0 0 no-repeat;
+    background: #0f0f0f url('../../../images/efsol/foot-bg.svg') 0 0 no-repeat;
     background-size: auto;
     background-attachment: fixed;
     background-position-y: 15rem;
@@ -311,7 +311,7 @@ footer.navbar-bottom {
 .b-stripe_content_bheader {
     display: block;
     border-bottom: none;
-    background: #f3f3f9 url("../../images/efsol/header-line.svg") 0 0 no-repeat;
+    background: #f3f3f9 url('../../../images/efsol/header-line.svg') 0 0 no-repeat;
     padding: 8px 0;
     position: relative;
     z-index: 99999;
@@ -890,14 +890,6 @@ main.content--page {
     margin-right: 8px
 }
 
-.navbar-h1 h1 {
-    line-height: 24px;
-    background-position: 0 13px;
-    font-size: 24px !important;
-    font-weight: 1000 !important;
-    color: #0f0f0f !important
-}
-
 .block_choose h3 {
     font-size: 16px !important;
     color: #0f0f0f !important;
@@ -919,30 +911,11 @@ ul.b-menu__list {
     margin: 0 auto
 }
 
-h1 span {
-    display: inline-block;
-    padding: 0 30px 0 30px !important;
-    background: #fff;
-    line-height: 32px !important;
-    position: relative;
-    margin-top: -4px;
-    font-size: 36px !important
-}
-
-h1 {
-    padding: 0 30px;
-    font-family: "Open Sans";
-    font-size: 30px;
-    text-align: center;
-    margin-top: 30px;
-    color: #0f0f0f;
-    clear: both
-}
-
 h2 {
     font-family: "Open Sans";
     text-align: center;
     margin-top: 30px;
+    /*background: url('../../../images/efsol/h2_bg.png') 0 18px repeat-x;*/
     color: #2e4346;
     clear: both;
     font-size: 28px
@@ -1037,7 +1010,7 @@ h2 span {
     .b-stripe_content_mheader > .b-stripe__in:after {
         content: "";
         position: absolute;
-        background: url("../../images/efsol/header-line.svg") 0 0 no-repeat;
+        background: url(/local/templates/inner_new/new_images/header/header-line.svg) 0 0 no-repeat;
         height: 60px;
         width: 150px;
         background-size: contain;
