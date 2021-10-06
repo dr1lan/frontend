@@ -41,6 +41,6 @@ class ScannerController extends AbstractController
     {
         $report = $request->get('report');
 
-        return $this->render('landing/report/report.html.twig', ['report' => $report]);
+        return $this->render('landing/report/report.html.twig', ['report' => $report, 'year' => date('Y')]);
     }
 }

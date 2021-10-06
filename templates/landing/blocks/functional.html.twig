@@ -1,11 +1,10 @@
-<div id="rec265722504" class="r t-rec" style=" " data-animationappear="off" data-record-type="720"><!-- t720 -->
-    <!-- cover -->
-    <div class="t-cover" id="recorddiv265722504" bgimgfield="img"
-         style="height:600px; background-image:url('https://static.tildacdn.com/tild3532-3063-4137-b539-633762316235/-/resize/20x/_2.jpg');">
-        <div class="t-cover__carrier loaded" id="coverCarry265722504" data-content-cover-id="265722504"
-             data-content-cover-bg="https://static.tildacdn.com/tild3532-3063-4137-b539-633762316235/_2.jpg"
+<div class="r t-rec" data-animationappear="off" data-record-type="720">
+    <div class="t-cover" bgimgfield="img"
+         style="height:600px; background-image:url({{ asset('images/background/1_20x.jpg') }});">
+        <div class="t-cover__carrier loaded"
+             data-content-cover-bg="{{ asset('images/background/1.jpg') }}"
              data-content-cover-height="600px" data-content-cover-parallax=""
-             style="height: 600px; background-attachment: scroll; background-image: url(&quot;https://thumb.tildacdn.com/tild3532-3063-4137-b539-633762316235/-/format/webp/_2.jpg&quot;);"></div>
+             style="height: 600px; background-attachment: scroll; background-image: url({{ asset('images/background/1.jpg') }})"></div>
         <div class="t-cover__filter"
              style="height:600px;background-image: -moz-linear-gradient(top, rgba(15,15,15,0.90), rgba(15,15,15,0.70));background-image: -webkit-linear-gradient(top, rgba(15,15,15,0.90), rgba(15,15,15,0.70));background-image: -o-linear-gradient(top, rgba(15,15,15,0.90), rgba(15,15,15,0.70));background-image: -ms-linear-gradient(top, rgba(15,15,15,0.90), rgba(15,15,15,0.70));background-image: linear-gradient(top, rgba(15,15,15,0.90), rgba(15,15,15,0.70));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#190f0f0f', endColorstr='#4c0f0f0f');"></div>
         <div class="t720">
@@ -15,128 +14,72 @@
                         <div class="t720__mainwrapper" data-hook-content="covercontent">
                             <div class="t720__textwrapper">
                                 <div class="t720__title t-title t-title_sm t-margin_auto"
-                                     style="color:#f3f3f9;font-size:40px;font-weight:700;" field="title">Получите скидку
-                                    10%!
+                                     style="color:#f3f3f9;font-size:40px;font-weight:700;" field="title"> Проверьте Ваш
+                                    сайт на уязвимости
                                 </div>
                                 <div class="t720__descr t-descr t-descr_xl t-margin_auto"
                                      style="color:#f3f3f9;font-size:20px;font-weight:500;max-width:800px;"
-                                     field="descr">При заказе двух и более услуг действует специальное предложение,
-                                    которое распространяется на все время их использования.<br><br>Оставьте вашу почту и
-                                    мы пришлем спецпредложение!<br></div>
+                                     field="descr"><br><br>Введите сайт для проверки<br></div>
                             </div>
                             <div>
-                                <form id="form265722504" name="form265722504" role="form" action="" method="POST"
-                                      data-formactiontype="2" data-inputbox=".t-input-group"
-                                      class="t-form js-form-proccess t-form_inputs-total_1"
-                                      data-success-callback="t720_onSuccess"><input type="hidden" name="formservices[]"
-                                                                                    value="17b9b37ead71a6e3afcdc1e9a4673959"
-                                                                                    class="js-formaction-services">
+                                <div id="scanner_form" class="t-form js-form-proccess t-form_inputs-total_1 ">
                                     <div class="js-successbox t-form__successbox t-text t-text_md"
                                          style="display:none;"></div>
                                     <div class="t-form__inputsbox">
-                                        <div class="t-input-group t-input-group_em js-error-control-box"
-                                             data-input-lid="1496398308530">
-                                            <div class="t-input-block"><input type="text" autocomplete="email"
-                                                                              name="Email"
-                                                                              class="t-input js-tilda-rule " value=""
-                                                                              placeholder="E-mail" data-tilda-req="1"
-                                                                              data-tilda-rule="email"
+                                        <div class="t-input-group t-input-group_em">
+                                            <div class="t-input-block"><input type="text" autocomplete="url"
+                                                                              name="URL"
+                                                                              class="t-input" value=""
+                                                                              placeholder="https://example.com"
+                                                                              id="scan_url"
                                                                               style="color:#000000; background-color:#ffffff; ">
-                                                <div class="t-input-error">Укажите, пожалуйста, корректный email</div>
-                                            </div>
-                                        </div>
-                                        <div class="t-form__errorbox-middle">
-                                            <div class="js-errorbox-all t-form__errorbox-wrapper"
-                                                 style="display: block;">
-                                                <div class="t-form__errorbox-text t-text t-text_md"><p
-                                                            class="t-form__errorbox-item js-rule-error js-rule-error-all"
-                                                            style="display: none;"></p>
-                                                    <p class="t-form__errorbox-item js-rule-error js-rule-error-req"
-                                                       style="display: none;"></p>
-                                                    <p class="t-form__errorbox-item js-rule-error js-rule-error-email"
-                                                       style="display: block;">Укажите, пожалуйста, корректный email</p>
-                                                    <p class="t-form__errorbox-item js-rule-error js-rule-error-name"
-                                                       style="display: none;"></p>
-                                                    <p class="t-form__errorbox-item js-rule-error js-rule-error-phone"
-                                                       style="display: none;"></p>
-                                                    <p class="t-form__errorbox-item js-rule-error js-rule-error-minlength"
-                                                       style="display: none;"></p>
-                                                    <p class="t-form__errorbox-item js-rule-error js-rule-error-string"
-                                                       style="display: none;"></p></div>
                                             </div>
                                         </div>
                                         <div class="t-form__submit">
-                                            <button type="submit" class="t-submit"
+                                            <button type="submit" class="t-submit" id="scan_submit"
                                                     style="color: rgb(15, 15, 15); background-color: rgb(255, 210, 0); border-radius: 0px; background-image: -webkit-gradient(radial, 154.391 76.0312, 674.595, 154.391 76.0312, 674.595, from(rgba(243, 243, 249, 0)), to(rgba(255, 255, 255, 0)));">
-                                                Получить спецпредложение
+                                                Сканировать
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="t-form__errorbox-bottom">
-                                        <div class="js-errorbox-all t-form__errorbox-wrapper" style="display: block;">
-                                            <div class="t-form__errorbox-text t-text t-text_md"><p
-                                                        class="t-form__errorbox-item js-rule-error js-rule-error-all"
-                                                        style="display: none;"></p>
-                                                <p class="t-form__errorbox-item js-rule-error js-rule-error-req"
-                                                   style="display: none;"></p>
-                                                <p class="t-form__errorbox-item js-rule-error js-rule-error-email"
-                                                   style="display: block;">Укажите, пожалуйста, корректный email</p>
-                                                <p class="t-form__errorbox-item js-rule-error js-rule-error-name"
-                                                   style="display: none;"></p>
-                                                <p class="t-form__errorbox-item js-rule-error js-rule-error-phone"
-                                                   style="display: none;"></p>
-                                                <p class="t-form__errorbox-item js-rule-error js-rule-error-minlength"
-                                                   style="display: none;"></p>
-                                                <p class="t-form__errorbox-item js-rule-error js-rule-error-string"
-                                                   style="display: none;"></p></div>
-                                        </div>
-                                    </div>
-                                    <input type="hidden" name="h1_title"
-                                           value="Облачные решения для бизнесаОблачные решения для бизнеса"><input
-                                            type="hidden" name="referer" value="https://dev.efsol.ru/cloud/">
-                                    <div style="position: absolute; left: -5000px; bottom:0;"><input type="text"
-                                                                                                     name="form-spec-comments"
-                                                                                                     value="Its good"
-                                                                                                     class="js-form-spec-comments"
-                                                                                                     tabindex="-1">
-                                    </div>
-                                </form>
-                                <style>#rec265722504 input::-webkit-input-placeholder {
+                                    <div id="loader" class="lds-dual-ring hidden overlay"></div>
+                                </div>
+                                <style>input::-webkit-input-placeholder {
                                         color: #000000;
                                         opacity: 0.5;
                                     }
 
-                                    #rec265722504 input::-moz-placeholder {
+                                    input::-moz-placeholder {
                                         color: #000000;
                                         opacity: 0.5;
                                     }
 
-                                    #rec265722504 input:-moz-placeholder {
+                                    input:-moz-placeholder {
                                         color: #000000;
                                         opacity: 0.5;
                                     }
 
-                                    #rec265722504 input:-ms-input-placeholder {
+                                    input:-ms-input-placeholder {
                                         color: #000000;
                                         opacity: 0.5;
                                     }
 
-                                    #rec265722504 textarea::-webkit-input-placeholder {
+                                    textarea::-webkit-input-placeholder {
                                         color: #000000;
                                         opacity: 0.5;
                                     }
 
-                                    #rec265722504 textarea::-moz-placeholder {
+                                    textarea::-moz-placeholder {
                                         color: #000000;
                                         opacity: 0.5;
                                     }
 
-                                    #rec265722504 textarea:-moz-placeholder {
+                                    textarea:-moz-placeholder {
                                         color: #000000;
                                         opacity: 0.5;
                                     }
 
-                                    #rec265722504 textarea:-ms-input-placeholder {
+                                    textarea:-ms-input-placeholder {
                                         color: #000000;
                                         opacity: 0.5;
                                     }</style>
@@ -147,19 +90,17 @@
             </div>
         </div>
     </div>
-    <style>#rec265722504 .t-submit:hover {
+    <style> .t-submit:hover {
             background-color: #fdc700 !important;
             color: #0f0f0f !important;
         }
 
-        #rec265722504 .t-submit {
+        .t-submit {
             -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
             transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }</style>
-    <style>#rec265722504 .t-btn[data-btneffects-first],
-        #rec265722504 .t-btn[data-btneffects-second],
-        #rec265722504 .t-submit[data-btneffects-first],
-        #rec265722504 .t-submit[data-btneffects-second] {
+    <style> .t-submit[data-btneffects-first],
+        .t-submit[data-btneffects-second] {
             position: relative;
             overflow: hidden;
             -webkit-transform: translate3d(0, 0, 0);

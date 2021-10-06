@@ -1,19 +1,23 @@
 $(document).ready(function () {
-
-    $('#scan').click(function () {
+    $('#scan_submit').click(function () {
         $.ajax({
-           url: '/scan',
+            url: '/scan',
             type: 'POST',
-            data: {url: $('#task_url').val()},
+            data: {url: $('#scan_url').val()},
             dataType: 'json',
+            beforeSend: function () {
+                $('#loader').removeClass('hidden')
+            },
             success: function (response) {
-               console.log(response)
-              $.redirect('/report', {
-                  report: response.report
-              })
+                $.redirect('/report', {
+                    report: response.report
+                })
+            },
+            complete: function () {
+                $('#loader').addClass('hidden')
             },
             error: function (error) {
-               console.log(error)
+                console.log(error)
             }
         });
     });

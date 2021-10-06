@@ -3,12 +3,15 @@
 {% block title %}Главная{% endblock %}
 
 {% block content %}
-    {% include 'landing/blocks/functional.html.twig' %}
+    <div class="content--page">
+        <div id="allrecords" class="t-records" style="overflow: hidden;">
+            {% include 'landing/blocks/functional.html.twig' %}
 
-    {% include 'landing/blocks/description.html.twig' %}
+            {% include 'landing/blocks/description.html.twig' %}
 
-    {% include 'landing/blocks/possibilities.html.twig' %}
+            {% include 'landing/blocks/possibilities.html.twig' %}
 
-    {% include 'landing/blocks/contacts.html.twig' %}
-
+            {% include 'landing/blocks/contacts.html.twig' %}
+        </div>
+    </div>
 {% endblock %}

@@ -1,86 +1,42 @@
-/*===== основные стили =====*/
-@font-face {
-    src: url("../fonts/Montserrat-Regular.ttf");
-    font-family: "Montserrat";
+.lds-dual-ring.hidden {
+    display: none;
 }
-
-body {
-    font-family: "Montserrat", sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    color: #0c1013;
+.lds-dual-ring {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 5% auto;
+    border-radius: 50%;
+    border: 6px solid #ffd200;
+    border-color: #ffd200 transparent #ffd200 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
 }
-
-/*===== functional =====*/
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .functional-area {
-        padding-top: 90px;
-        padding-bottom: 100px;
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 
-@media (max-width: 767px) {
-    .functional-area {
-        padding-top: 70px;
-        padding-bottom: 80px;
-    }
-}
 
-.functional-content .functional-title {
-    font-size: 18px;
-    font-weight: 500;
-    padding-bottom: 15px;
-}
-
-/*===== description =====*/
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .description-area {
-        padding-top: 90px;
-        padding-bottom: 100px;
-    }
-}
-
-@media (max-width: 767px) {
-    .description-area {
-        padding-top: 70px;
-        padding-bottom: 80px;
-    }
-}
-
-/*===== possibilities =====*/
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .possibilities-area {
-        padding-top: 90px;
-        padding-bottom: 100px;
-    }
-}
-
-@media (max-width: 767px) {
-    .possibilities-area {
-        padding-top: 70px;
-        padding-bottom: 80px;
-    }
-}
-
-/*===== contact =====*/
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .contact-area {
-        padding-top: 90px;
-        padding-bottom: 100px;
-    }
-}
-
-@media (max-width: 767px) {
-    .contact-area {
-        padding-top: 70px;
-        padding-bottom: 80px;
-    }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    z-index: 999;
+    opacity: 1;
+    transition: all 0.5s;
 }
