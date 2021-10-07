@@ -27,6 +27,8 @@ class ScannerService
 
         $crawler = new Crawler(file_get_contents($filename));
 
+        unlink($filename);
+
         return $crawler->filter('div#page')->html();
     }
 }
