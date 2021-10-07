@@ -1,6 +1,7 @@
 .lds-dual-ring.hidden {
     display: none;
 }
+
 .lds-dual-ring {
     width: 80px;
     height: 80px;
@@ -8,6 +9,7 @@
     align-items: center;
     justify-content: center
 }
+
 .lds-dual-ring:after {
     content: " ";
     display: block;
@@ -19,6 +21,7 @@
     border-color: #ffd200 transparent #ffd200 transparent;
     animation: lds-dual-ring 1.2s linear infinite;
 }
+
 @keyframes lds-dual-ring {
     0% {
         transform: rotate(0deg);
@@ -35,8 +38,255 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0,0,0,.8);
+    background: rgba(0, 0, 0, .8);
     z-index: 999;
     opacity: 1;
     transition: all 0.5s;
+}
+
+#report_title {
+    box-sizing: border-box;
+    line-height: 1.3;
+    color: #0f0f0f !important;
+    margin-bottom: 2.13em;
+    padding: 0 30px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+    background: url('../images/efsol/h2_bg.png') 0 18px repeat-x;
+    clear: both;
+}
+
+#report_title span {
+    display: inline-block;
+    padding: 0 30px 0 30px !important;
+    background: #fff;
+    line-height: 32px !important;
+    position: relative;
+    margin-top: -4px;
+    font-size: 36px !important;
+}
+
+.report_h3::after, #report_info::after {
+    margin-left: 1.5rem;
+}
+
+::before, ::after {
+    box-sizing: border-box;
+}
+
+.report_h3::after, .report_h3::before,
+#report_info::after, #report_info::before {
+    position: relative !important;
+    flex: 1 !important;
+    content: "";
+    background-color: #ffd205;
+    height: 3px;
+    top: unset;
+    margin-top: unset;
+    min-width: 3rem;
+    box-sizing: border-box;
+}
+
+.report_h3::before, #report_info::before {
+    margin-right: 1.5rem;
+    content: "";
+    display: block;
+    margin-top: 0;
+    width: 100%;
+    position: absolute;
+    background-color: #ffd205;
+    height: 3px;
+    top: 50%;
+    z-index: 1;
+}
+
+.report_h3, #report_info {
+    line-height: 1.3;
+    color: #0f0f0f !important;
+    margin-top: 3.11em !important;
+    display: flex;
+    align-items: center;
+    font-size: 18px !important;
+    margin-bottom: 24px !important;
+    background: 0 0 !important;
+    padding: 0 !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    text-transform: uppercase;
+    position: relative;
+    box-sizing: border-box;
+    clear: both;
+    border: 0;
+    outline: 0;
+}
+
+.report_h3 span, #report_info span {
+    padding: 0 34px !important;
+    background-color: #fff !important;
+    display: inline-block;
+    z-index: 2;
+    position: relative;
+    box-sizing: border-box;
+    line-height: 34px;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+}
+
+#page p {
+    padding: 0 34px !important;
+    background-color: #fff !important;
+    display: inline-block;
+    z-index: 2;
+    position: relative;
+    box-sizing: border-box;
+    line-height: 34px;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+}
+
+#report_table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    empty-cells: show;
+    max-width: 80%;
+    font-size: 22px;
+    margin: auto;
+}
+
+td::after, th::after {
+    margin-bottom: calc((.75 - 1.5) * .49em);
+}
+
+td::after, td::before, th::after, th::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+}
+
+td::before, th::before {
+    margin-top: calc((.75 - 1.5) * .49em);
+}
+
+td:first-child, th:first-child {
+    padding-left: 0;
+}
+
+td, th {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    vertical-align: bottom;
+}
+
+table caption, th {
+    font-weight: 700;
+    text-align: left;
+}
+
+td, th {
+    color: inherit;
+}
+
+#details {
+    margin: auto;
+    width: 80%;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#report_tabs a.is-active::before {
+    bottom: -1.5rem;
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-top: 10px solid #ffd200;
+    top: auto;
+    right: -10px;
+    z-index: 2;
+    width: 0;
+    height: 0;
+}
+
+#report_tabs a.is-active {
+    border: 5px solid #ffd200;
+    background: #ffd200;
+    color: #0f0f0f;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: none !important;
+}
+
+@media (max-width: 767px) {
+    #report_tabs a.is-active::before {
+        display: none;
+    }
+
+    .report-section {
+        border: 5px solid #f3f3f9;
+        padding: 3rem 2rem 2rem;
+        margin: 0 !important;
+    }
+
+    #report_tabs ul {
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+}
+
+#report_tabs a {
+    padding: .5rem 2rem;
+    text-align: center;
+    line-height: 140%;
+    border-radius: 2px;
+    margin-right: .3125rem;
+    border: 5px solid #f3f3f9;
+    background: #fff;
+    color: #0f0f0f;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.report-section {
+    border: 5px solid #f3f3f9;
+    margin-top: -2rem;
+    padding: 3rem 2rem 2rem;
+}
+
+#details dt::after, #details h4::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 24px;
+    left: 2px;
+    top: 4px;
+    -webkit-transform: skew(-45deg);
+    -moz-transform: skew(-45deg);
+    -o-transform: skew(-45deg);
+    background: #ffd200;
+}
+
+ul#reference li {
+    padding-left: 2rem;
+    background-image: url('../images/efsol/h1.svg');
+    background-position: 0 0;
+    background-size: 1.6rem 1.6rem;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+ul#reference {
+    margin: 0;
+    padding: 0;
 }

@@ -13,6 +13,7 @@ class ScannerService
     {
     }
 
+    // todo delete report
     public function runScan(string $domain): string
     {
         $reportPath = '/home/sveta/output';

@@ -2,22 +2,231 @@
 
 {% block title %}Отчет{% endblock %}
 
-{% block header %}
-    <header id="home" class="header-area">
-        <div class="navigation fixed-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
-                            <img src="{{ asset('images/logo.png') }}" alt="Logo">
-                        </nav>
-                    </div>
+{% block content %}
+    <div class="content--page">
+        <div id="allrecords" class="t-records" style="overflow: hidden;">
+{#            {{ report | raw }}#}
+            <div id="page">
+                <div style="text-align: center">
+                    <h2 id="report_title" class="title" style="text-align: center; margin-top: 50px;">
+                        <span>Отчет об уязвимостях</span>
+                    </h2>
+                    <h3 id="report_h3">
+                        <span>Цель: https://swsu.ru/</span>
+                    </h3>
+                    <p style="text-align: center;">Дата сканирования: Wed, 06 Oct 2021 20:12:41 +0000.</p><br>
+                    <p>Область сканирования: url</p>
                 </div>
+                <h4 id="report_info">Итоговая информация</h4>
+                <table class="width-100 hovered" id="report_table">
+                    <thead>
+                    <tr>
+                        <th id="thead__left">
+                            <span>Категория</span>
+                        </th>
+                        <th id="thead__right">
+                            <span>Количество найденных уязвимостей</span>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody id="summary">
+                    <tr>
+                        <td class="small">
+                            Файл резервной копии
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Слабые учетные данные
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            CRLF (Carriage Return Line Feed) инъекция
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_3">Конфигурация политики безопасности контента</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Подделка межсайтовых запросов
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Потенциально опасный файл
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Выполнение команды
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Атака с обходом каталогов
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Цифровой отпечаток фреймворка веб приложения
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Цифровой отпечаток веб-сервера
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Обход Htaccess
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTTP заголовки безопасности
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Флаг HttpOnly cookie
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Открытое перенаправление
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Флаг Secure cookie
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            SQL-инъекция
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Подделка запросов на стороне сервера
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Захват субдомена
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            "Слепая" SQL инъекция
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Межсайтовый скриптинг
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Внешний объект XML
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Внутренняя ошибка сервера
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Потребление ресурсов
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Цифровой отпечаток устройства (фингерпринт)
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTTP-методы
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div id="details">
+                    <h3 id="vuln_type_3" class="report_h3">Конфигурация политики безопасности контента</h3>
+                    <dl>
+                        <dt class="h3-yellow-small grey-figure wow fadeIn">Описание</dt>
+                        <dd>Политика безопасности контента (CSP) - это дополнительный уровень безопасности, который помогает обнаруживать и уменьшать влияние определенных типов атак, включая атаки с использованием межсайтовых сценариев (XSS) и инъекции в данных.</dd>
+                    </dl>
+
+                    <h4 class="h3-yellow-small grey-figure wow fadeIn" style="margin-top: 40px;">
+                        <span>Уязвимости найдены в /</span>
+                    </h4>
+                    <div class="is-navbar-container">
+                        <div class="is-navbar">
+                            <nav class="is-center" id="report_tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                                <ul style="min-height: 100px;">
+                                    <li><a href="#tab-vuln-3-0-1" class="is-active">Описание</a></li>
+                                    <li><a href="#tab-vuln-3-0-2">HTTP запрос</a></li>
+                                    <li><a href="#tab-vuln-3-0-3">cURL команда</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <section id="tab-vuln-3-0-1" class="report-section" style="min-height: 100px;">
+                        <p>CSP (Content Security Policy) не установлен</p>
+                    </section>
+                    <section id="tab-vuln-3-0-2" style="min-height: 100px;" class="is-hidden report-section">
+                            <p>GET / HTTP/1.1</p><br>
+                        <p>Host: swsu.ru</p>
+                    </section>
+                    <section id="tab-vuln-3-0-3" style="min-height: 100px;" class="is-hidden report-section">
+                        <p>curl &#34;https://swsu.ru/&#34;</p>
+                    </section>
+
+                    <dl style="margin-top: 50px;">
+                        <dt class="h3-yellow-small grey-figure wow fadeIn">Решение</dt>
+                        <dd>Настройка политики безопасности контента включает добавление HTTP-заголовка Content-Security-Policy на веб-страницу и присвоение ему значений для управления ресурсами, которые разрешено загружать пользовательскому агенту для этой страницы.</dd></dl>
+                    <h5>Справочная информация</h5>
+                    <ul id="reference">
+                        <li style="list-style-type: none;"><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Mozilla: Content Security Policy (CSP)</a></li>
+                        <li style="list-style-type: none;"><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">OWASP: Content Security Policy Cheat Sheet</a></li>
+                        <li style="list-style-type: none;"><a href="https://owasp.org/www-pdf-archive/2019-02-22_-_How_do_I_Content_Security_Policy_-_Print.pdf">OWASP: How to do Content Security Policy (PDF)</a></li>
+                    </ul>
+                    <br />
+                </div>
+                <script>$K.init();</script>
             </div>
         </div>
-    </header>
-{% endblock %}
-
-{% block content %}
-    {{ report | raw }}
+    </div>
 {% endblock %}
