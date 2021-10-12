@@ -47,7 +47,6 @@
         <link type="text/css" rel="stylesheet" href="{{ asset('css/main.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('css/efsol/guides/guides.css') }}"
               data-template-style="true">
-        <link type="text/css" rel="stylesheet" href="{{ asset('report/kube.min.css') }}" data-template-style="true">
 
         <script type="text/javascript" src="{{ asset('efsol/templates/js/lib/jquery.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('efsol/templates/js/lib/bootstrap.min.js') }}"></script>
@@ -91,6 +90,9 @@
     {% endblock %}
     {% block footer %}
         {% include 'landing/blocks/footer.html.twig' %}
+    {% endblock %}
+    {% block modal %}
+        {% include 'landing/blocks/modal.html.twig' %}
     {% endblock %}
 </div>
 </body>

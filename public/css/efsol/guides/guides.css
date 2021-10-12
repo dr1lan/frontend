@@ -476,7 +476,7 @@ table.styles-table td {
 
 .typography-content .h1::before, .typography-content .h2::before,
 .typography-content .h3-yellow-small::after {
-    background: url('/local/templates/efsol-g3/images/icon/h1.svg') no-repeat;
+    background: url('../../../images/efsol/h1.svg') no-repeat;
 }
 
 .typography-content .h3-yellow-small.grey-figure {
@@ -705,7 +705,7 @@ table.styles-table td {
 .modal-header .h3-yellow-small::after{
 	content: "";
     position: absolute;
-    background: url('/local/templates/efsol-g3/images/icon/h1.svg') no-repeat;;
+    background: url('../../../images/efsol/h1.svg') no-repeat;;
     width: 40px;
     height: 20px;
     left: -14px;
@@ -870,7 +870,7 @@ table.styles-table td {
     left: -14px;
 	top: 0;
 	position: absolute;
-    background: url('/local/templates/efsol-g3/images/icon/h1.svg') no-repeat;
+    background: url('../../../images/efsol/h1.svg') no-repeat;
     z-index: -1;
     background-size: contain;
 }
