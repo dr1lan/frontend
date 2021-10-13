@@ -203,7 +203,7 @@ td, th {
     line-height: 1.5;
 }
 
-#report_tabs a.is-active::before {
+nav.tabs a.is-active::before {
     bottom: -1.5rem;
     content: "";
     position: absolute;
@@ -218,7 +218,7 @@ td, th {
     height: 0;
 }
 
-#report_tabs a.is-active {
+nav.tabs a.is-active {
     border: 5px solid #ffd200;
     background: #ffd200;
     color: #0f0f0f;
@@ -229,27 +229,22 @@ td, th {
 }
 
 @media (max-width: 767px) {
-    #report_tabs a.is-active::before {
+    nav.tabs a.is-active::before {
         display: none;
     }
 
-    .report-section {
+    section {
         border: 5px solid #f3f3f9;
         padding: 3rem 2rem 2rem;
         margin: 0 !important;
     }
 
-    #report_tabs ul {
-        padding: 0 !important;
-        max-width: 100% !important;
-    }
-
-    #report_tabs a {
+    nav.tabs a {
         width: 100% !important;
     }
 }
 
-#report_tabs a {
+nav.tabs a {
     padding: .5rem 2rem;
     text-align: center;
     line-height: 140%;
@@ -257,15 +252,28 @@ td, th {
     margin-right: .3125rem;
     border: 5px solid #f3f3f9;
     background: #fff;
-    color: #0f0f0f;
+    color: #0f0f0f !important;
     text-decoration: none;
     font-weight: bolder;
+    display: inline-block;
 }
 
-.report-section {
+nav.tabs a:not(.is-active):hover {
+    background: #FFFFFF;
+}
+
+nav.tabs a:hover {
+    color: #0f0f0f !important;
+}
+
+section {
     border: 5px solid #f3f3f9;
-    margin-top: -2rem;
+    margin-top: -3rem;
     padding: 3rem 2rem 2rem;
+}
+
+section pre {
+    border: 0 !important;
 }
 
 #details dt::after, #details h4::after {
