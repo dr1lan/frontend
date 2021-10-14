@@ -7,11 +7,11 @@
         <title>EFSOL Vulnerability Scanner</title>
         <!-- Favicons -->
         <link rel="icon" href="{{ asset('images/favicon.svg') }}" sizes="any" type="image/svg+xml">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/efsol/apple-touch-icon.png') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/efsol/favicon-32x32.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/efsol/favicon-16x16.png') }}">
-        <link rel="manifest" href="{{ asset('efsol/favicon/site.webmanifest') }}">
-        <link rel="mask-icon" href="{{ asset('efsol/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('images/favicon/site.webmanifest') }}">
+        <link rel="mask-icon" href="{{ asset('images/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <!-- End Favicons-->
@@ -24,61 +24,35 @@
 
         <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,700,700i,800,900"
               rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="{{ asset('efsol/templates/css/lib/u-tilda-template-fix.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('efsol/templates/css/lib/bootstrap.min.css') }}"
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"
               data-template-style="true">
-        <link type="text/css" rel="stylesheet" href="{{ asset('efsol/templates/css/lib/animate.min.css') }}"
-              data-template-style="true">
-        <link type="text/css" rel="stylesheet" href="{{ asset('efsol/templates/css/lib/jquery.fancybox.min.css') }}"
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}"
               data-template-style="true">
 
-        <link type="text/css" rel="stylesheet" href="{{ asset('efsol/tilda/tilda-animation-1.0.min.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('efsol/tilda/ilda-cover-1.0.min.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('efsol/tilda/ilda-forms-1.0.min.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('efsol/tilda/tilda-grid-3.0.min.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('efsol/tilda/tilda-popup-1.1.min.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('efsol/tilda/tilda-slds-1.4.min.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('efsol/tilda/tilda-blocks-2.14.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-cover-1.0.min.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-forms-1.0.min.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-grid-3.0.min.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-blocks-2.14.css') }}">
 
-        <link type="text/css" rel="stylesheet" href="{{ asset('efsol/templates/css/general.css') }}"
-              data-template-style="true">
-        <link type="text/css" rel="stylesheet" href="{{ asset('efsol/templates/css/checkbox.css') }}"
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/general.css') }}"
               data-template-style="true">
         <link type="text/css" rel="stylesheet" href="{{ asset('css/main.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('css/efsol/guides/guides.css') }}"
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/guides.css') }}"
               data-template-style="true">
 
-        <script type="text/javascript" src="{{ asset('efsol/templates/js/lib/jquery.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/templates/js/lib/bootstrap.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/templates/js/lib/jquery.placeholder.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/templates/js/lib/jquery.mask.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/templates/js/lib/jquery.fancybox.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/templates/js/lib/select2.full.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/templates/js/lib/classie.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/templates/js/lib/wow.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/efsol/jquery.reject.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/efsol/clipboard.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/efsol/new_common.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/templates/js/ripple-btn.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/js/custom/form_handler.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/templates/js/lib/u-tilda-form-fix.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/js/tilda/hammer.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/efsol/lazyload.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/js/tilda/tilda-animation-1.0.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
 
         <script type="text/javascript" src="{{ asset('js/jquery.redirect.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('report/kube.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/kube.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/general.js') }}"></script>
 
-        <script type="text/javascript" src="{{ asset('efsol/js/tilda/tilda-cover-1.0.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/js/tilda/tilda-events-1.0.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/js/tilda/tilda-forms-1.0.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/js/tilda/tilda-scripts-3.0.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/js/tilda/ilda-slds-1.4.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/js/tilda/tilda-video-processor-1.0.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/js/tilda/tildastat-0.2.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('efsol/js/tilda/tilda-blocks-2.7.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/tilda/tilda-cover-1.0.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/tilda/tilda-forms-1.0.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/tilda/tilda-scripts-3.0.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/tilda/tilda-blocks-2.7.js') }}"></script>
 
     {% endblock %}
 </head>

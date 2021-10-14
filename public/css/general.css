@@ -1871,7 +1871,7 @@ h1.b-section__title.b-heading span, h2.b-section__title.b-heading span {
     .b-stripe_content_mheader > .b-stripe__in:after {
         content: "";
         position: absolute;
-        background: url(../images/header/header-line.svg) no-repeat;
+        background: url(../images/header-line.svg) no-repeat;
         height: 60px;
         width: 150px;
         background-size: contain;
@@ -3268,7 +3268,7 @@ input[type=radio]:checked + label:before {
     .b-section__title.question__title::after {
         content: "";
         position: absolute;
-        background: url(../images/header/phone-tel.svg) no-repeat;
+        background: url(../images/phone-tel.svg) no-repeat;
         height: 35px;
         width: 150px;
         right: 0;
@@ -4380,7 +4380,7 @@ ul.b-list_content_menu-level-2.online-service li a:hover {
 .b-menu__item-text.phone-header::after {
     content: "";
     position: absolute;
-    background: url(../images/header/phone-tel.svg) no-repeat;
+    background: url(../images/phone-tel.svg) no-repeat;
     height: 24px;
     width: 72px;
     right: 0;
@@ -5415,7 +5415,7 @@ h1.b-section__title.b-heading span {
     .b-stripe_content_mheader > .b-stripe__in:after {
         content: "";
         position: absolute;
-        background: url(../images/header/header-line.svg) no-repeat;
+        background: url(../images/header-line.svg) no-repeat;
         height: 60px;
         width: 150px;
         background-size: contain;
@@ -5925,7 +5925,7 @@ h1.b-section__title.b-heading span {
 .b-stripe_content_footer {
     display: block;
     position: relative;
-    background: url(../images/footer/foot-bg.svg) no-repeat fixed #0f0f0f;
+    background: url(../images/foot-bg.svg) no-repeat fixed #0f0f0f;
     background-size: auto;
     background-position-y: 15rem;
     background-position-x: right
@@ -8314,7 +8314,7 @@ input[type=time]::-webkit-inner-spin-button {
     .b-stripe_content_bheader {
         display: block;
         border-bottom: 0;
-        background: url(../images/header/header-line.svg) no-repeat #f3f3f9;
+        background: url(../images/header-line.svg) no-repeat #f3f3f9;
         padding: 8px 0;
         position: relative;
         z-index: 99999;
@@ -8899,7 +8899,7 @@ input[type=time]::-webkit-inner-spin-button {
     .b-section__title.question__title::after {
         content: "";
         position: absolute;
-        background: url(../images/header/phone-tel.svg) no-repeat;
+        background: url(../images/phone-tel.svg) no-repeat;
         height: 35px;
         width: 150px;
         right: 0;
