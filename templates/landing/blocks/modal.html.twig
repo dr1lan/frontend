@@ -1,0 +1,109 @@
+<div class="modal fade" id="callback-popup" tabindex="-1" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog lg-mod" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="h3-yellow-small">
+                    <span>Заказать звонок</span>
+                </h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-image: -webkit-gradient(radial, 1211 63, 0, 1211 63, 0, from(rgba(243, 243, 249, 0)), to(rgba(255, 255, 255, 0)));">
+                    <span aria-hidden="true"><img src="{{ asset('/images/close.svg') }}" alt="close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="callback-form" method="POST" action="/local/templates/index_new/save.php">
+                    <input type="hidden" name="HTTP_REFERER" value="https://efsol.ru/">
+                    <input type="hidden" name="city" value="">
+                    <input type="hidden" name="source" value="">
+                    <input type="hidden" name="fid" value="">
+                    <input type="hidden" name="utm_campaign" value="">
+                    <input type="hidden" name="g-recaptcha-response" value="" id="callback-g-recaptcha">
+                    <input type="hidden" name="g-action" value="" id="callback-g-action">
+                    <fieldset class="form-group col-sm-6 pl-0">
+                        <input type="text" class="form-control" id="popup_fullname" name="fullname" placeholder="Имя*">
+                    </fieldset>
+
+                    <fieldset class="form-group col-sm-6 pr-0">
+                        <input type="text" class="form-control" id="popup_phone" name="phone" placeholder="Телефон*">
+                    </fieldset>
+
+                    <fieldset class="form-group col-sm-12 pr-0 pl-0">
+                        <input type="text" class="form-control" id="email-mod" name="email" placeholder="E-mail">
+                    </fieldset>
+
+
+
+                    <fieldset class="form-group col-sm-12 pr-0 pl-0">
+                        <textarea name="comment" class="form-control" placeholder="Сообщение" rows="4"></textarea>
+                    </fieldset>
+
+                    <fieldset class="form-group col-sm-12 pr-0 pl-0 js-cloudFile" style="display: block;">
+                        <input type="file" name="files" class="form-control" placeholder="Файлы" multiple="" size="3145728" accept=".doc, .docx, .pdf, .xls, .xlsx">
+                        <input type="text" style="display: none" name="cloud_files" value="">
+                    </fieldset>
+
+                    <div class="personal__data flex">
+                        <span style="padding-left:0px;">*нажимая на кнопку, Вы даете согласие на <a href="/privacy-policy.php">обработку персональных данных</a></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button name="submit" type="submit" class="btn b__button_yellow triang__black text-left" onclick="yaCounter213614.reachGoal('newmodalform'); return true;">
+                            <span>Заказать</span>
+                        </button>
+                    </div>
+                    <input type="hidden" name="h1_title" value="
+                                        Аренда 1С:ERP в облаке EFSOL
+                                    "><input type="hidden" name="referer" value="https://efsol.ru/"><input type="hidden" name="showfiles" value="Y"><input type="hidden" name="target" value="#callback-popup"><input type="hidden" name="toggle" value="modal"></form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="demoProduct" tabindex="-1" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog lg-mod" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="h3-yellow-small">
+                    <span>Заказать демонстрацию</span>
+                </h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-image: -webkit-gradient(radial, 1228 69, 0, 1228 69, 0, from(rgba(243, 243, 249, 0)), to(rgba(255, 255, 255, 0)));">
+                    <span aria-hidden="true"><img src="{{ asset('/images/close.svg') }}" alt="close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="demo-product-form" action="/local/templates/index_new/save.php" method="POST">
+                    <input type="hidden" name="HTTP_REFERER" value="https://efsol.ru/">
+                    <input type="hidden" name="city" value="" id="demo-city">
+                    <input type="hidden" name="source" value="" id="demo-source">
+                    <input type="hidden" name="fid" value="" id="demo-fid">
+                    <input type="hidden" name="utm_campaign" value="">
+                    <fieldset class="form-group col-sm-6 pl-0">
+                        <input type="text" class="form-control" id="demo_fullname_d" name="fullname" placeholder="Имя*">
+                    </fieldset>
+
+                    <fieldset class="form-group col-sm-6 pr-0">
+                        <input type="text" class="form-control" id="demo_phone_d" name="phone" placeholder="Телефон*">
+                    </fieldset>
+
+                    <fieldset class="form-group col-sm-12 pl-0 pr-0">
+                        <input type="text" class="form-control" id="democompanyName" name="orgname" placeholder="Название компании">
+                    </fieldset>
+
+
+                    <fieldset class="form-group col-sm-12 pr-0 pl-0">
+                        <textarea name="comment" class="form-control" placeholder="Сообщение" rows="4"></textarea>
+                    </fieldset>
+
+                    <div class="personal__data flex">
+                        <span>*нажимая на кнопку, Вы даете согласие на <a href="/privacy-policy.php">обработку персональных данных</a></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button name="submit" type="submit" class="btn b__button_yellow triang__black text-left" onclick="yaCounter213614.reachGoal('newmodalform'); return true;">
+                            <span>Заказать</span>
+                        </button>
+                    </div>
+                    <input type="hidden" name="h1_title" value="
+                                        Аренда 1С:ERP в облаке EFSOL
+                                    "><input type="hidden" name="referer" value="https://efsol.ru/"><input type="hidden" name="target" value="#demoProduct"><input type="hidden" name="toggle" value="modal"></form>
+            </div>
+        </div>
+    </div>
+</div>
