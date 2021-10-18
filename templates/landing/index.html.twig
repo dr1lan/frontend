@@ -4,10 +4,19 @@
 
 {% block content %}
     <div class="content--page">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-cover-1.0.min.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-forms-1.0.min.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-grid-3.0.min.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-blocks-2.14.css') }}">
+
+        <script type="text/javascript" src="{{ asset('js/tilda/tilda-cover-1.0.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/tilda/tilda-forms-1.0.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/tilda/tilda-scripts-3.0.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/tilda/tilda-blocks-2.7.js') }}"></script>
         <div id="allrecords" class="t-records" style="overflow: hidden;">
             {% include 'landing/blocks/functional.html.twig' %}
 
-            {% include 'landing/blocks/description.html.twig' %}
+            {% include 'landing/blocks/problems.html.twig' %}
 
             {% include 'landing/blocks/possibilities.html.twig' %}
 

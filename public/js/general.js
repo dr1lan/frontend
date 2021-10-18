@@ -4,7 +4,7 @@ $(document).ready(function () {
         if (isValidUrl(url)) {
             $('.t-form__errorbox-bottom').hide();
             $.ajax({
-                url: '/scan',
+                url: '/make_report',
                 type: 'POST',
                 data: {url: url},
                 dataType: 'json',

@@ -4,7 +4,7 @@
     {% block head %}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>EFSOL Vulnerability Scanner</title>
+        {% block title %}<title>EFSOL Vulnerability Scanner</title>{% endblock %}
         <!-- Favicons -->
         <link rel="icon" href="{{ asset('images/favicon.svg') }}" sizes="any" type="image/svg+xml">
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/apple-touch-icon.png') }}">
@@ -22,17 +22,17 @@
         <meta name="robots" content="index, follow"/>
         <meta name="description" content="Сервис Efsol VulnerabilityScanner"/>
 
-        <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,700,700i,800,900"
+        <link href="{{ asset('fonts/montserrat.css') }}"
               rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"
               data-template-style="true">
         <link type="text/css" rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}"
               data-template-style="true">
 
-        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-cover-1.0.min.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-forms-1.0.min.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-grid-3.0.min.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-blocks-2.14.css') }}">
+{#        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-cover-1.0.min.css') }}">#}
+{#        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-forms-1.0.min.css') }}">#}
+{#        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-grid-3.0.min.css') }}">#}
+{#        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-blocks-2.14.css') }}">#}
 
         <link type="text/css" rel="stylesheet" href="{{ asset('css/general.css') }}"
               data-template-style="true">
@@ -41,7 +41,7 @@
               data-template-style="true">
 
         <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/select2.full.min.js') }}"></script>
@@ -53,10 +53,10 @@
         <script type="text/javascript" src="{{ asset('js/kube.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/general.js') }}"></script>
 
-        <script type="text/javascript" src="{{ asset('js/tilda/tilda-cover-1.0.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/tilda/tilda-forms-1.0.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/tilda/tilda-scripts-3.0.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/tilda/tilda-blocks-2.7.js') }}"></script>
+{#        <script type="text/javascript" src="{{ asset('js/tilda/tilda-cover-1.0.min.js') }}"></script>#}
+{#        <script type="text/javascript" src="{{ asset('js/tilda/tilda-forms-1.0.min.js') }}"></script>#}
+{#        <script type="text/javascript" src="{{ asset('js/tilda/tilda-scripts-3.0.min.js') }}"></script>#}
+{#        <script type="text/javascript" src="{{ asset('js/tilda/tilda-blocks-2.7.js') }}"></script>#}
 
     {% endblock %}
 </head>

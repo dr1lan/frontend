@@ -242,6 +242,16 @@ nav.tabs a.is-active {
     nav.tabs a {
         width: 100% !important;
     }
+
+    .vulnerabilities .col-md-6, .u-promo-work-list__container .col-md-6,
+    #default-tab .col-md-6 {
+        float: none;
+        max-width: 100% !important;
+    }
+
+    ymaps {
+        height: 0 !important;
+    }
 }
 
 nav.tabs a {
@@ -301,4 +311,166 @@ ul#reference li {
 ul#reference {
     margin: 0;
     padding: 0;
+}
+
+.b-stripe.b-stripe_content_item-promo-lede.banner--sl {
+    min-height: 450px;
+    max-width: 1170px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.etaps__v1 {
+    padding: 2rem;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.bg-grey {
+    background: #f3f3f9 !important;
+}
+
+.container--etaps .title::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #ffd200;
+    bottom: -6px;
+    left: 0;
+}
+
+.container--etaps .title {
+    color: #0f0f0f;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    text-transform: lowercase;
+}
+
+.efsol_goldUL {
+    padding: 0;
+    margin-left: 20px;
+}
+
+ul.efsol_goldUL li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #d0d4d9;
+    width: 8px;
+    height: 8px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-transform: skew(0);
+    -moz-transform: skew(0);
+    -o-transform: skew(0);
+    transform: skew(0);
+    left: 0;
+    margin-top: 10px;
+}
+
+ul.efsol_goldUL li {
+    list-style-type: none;
+    font-size: 14px;
+    line-height: 1.75rem;
+    margin-bottom: 10px;
+}
+
+.row::after {
+    clear: both;
+}
+
+.vulnerabilities .row::before, .row::after {
+    content: " ";
+    display: table;
+}
+
+.vulnerabilities .col-md-6 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.--align-stretch {
+    align-items: stretch;
+}
+
+.--align-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.u-promo-work-list__inner {
+    padding: 2.5rem 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 150px;
+}
+
+.u-promo-work-list__inner .--num {
+    margin-right: 1rem;
+}
+
+.u-promo-work-list__inner .--text {
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.--bg-gray {
+    background-color: #f3f3f9 !important;
+}
+
+.col-md-6 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    min-height: 1px;
+    float: left;
+    max-width: 45% !important;
+}
+
+.e_page section {
+    border: 0;
+    margin-top: 0;
+}
+
+.news-detail .b-stripe__in__1440 {
+    background: transparent;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@media (max-width: 801px) {
+    .b-stripe.b-stripe_content_item-promo-lede.banner--sl {
+        min-height: 350px;
+    }
 }

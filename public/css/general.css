@@ -572,7 +572,7 @@ body {
 }
 
 .h1::before, .h3-yellow-small::after {
-    background: url(../images/icon/h1.svg) no-repeat
+    background: url(../images/h1.svg) no-repeat
 }
 
 .h1::before {
@@ -632,7 +632,7 @@ body {
 
 .twoTabIcon .h3-yellow-small::after {
     position: absolute;
-    background: url(../images/icon/h1.svg) no-repeat;
+    background: url(../images/h1.svg) no-repeat;
     z-index: 0;
     background-size: contain
 }
@@ -6703,7 +6703,7 @@ h1.b-section__title.b-heading span {
 
 .inner__page::after {
     position: absolute;
-    background: url(../images/products/bg-triang.svg) no-repeat;
+    background: url(../images/bg-triang.svg) no-repeat;
     width: 100%;
     top: 0;
     z-index: 0;
