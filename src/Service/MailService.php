@@ -39,7 +39,6 @@ class MailService
 
     private function getIPInfo(string $ip): array
     {
-        $ip = '176.194.230.88';
         $ch = curl_init('http://ip-api.com/json/' . $ip . '?lang=ru');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

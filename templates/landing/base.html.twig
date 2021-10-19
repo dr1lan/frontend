@@ -29,11 +29,6 @@
         <link type="text/css" rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}"
               data-template-style="true">
 
-{#        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-cover-1.0.min.css') }}">#}
-{#        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-forms-1.0.min.css') }}">#}
-{#        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-grid-3.0.min.css') }}">#}
-{#        <link type="text/css" rel="stylesheet" href="{{ asset('css/tilda/tilda-blocks-2.14.css') }}">#}
-
         <link type="text/css" rel="stylesheet" href="{{ asset('css/general.css') }}"
               data-template-style="true">
         <link type="text/css" rel="stylesheet" href="{{ asset('css/main.css') }}">
@@ -49,15 +44,6 @@
         <script type="text/javascript" src="{{ asset('js/WOW.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/new_common.min.js') }}"></script>
 
-        <script type="text/javascript" src="{{ asset('js/jquery.redirect.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/kube.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/general.js') }}"></script>
-
-{#        <script type="text/javascript" src="{{ asset('js/tilda/tilda-cover-1.0.min.js') }}"></script>#}
-{#        <script type="text/javascript" src="{{ asset('js/tilda/tilda-forms-1.0.min.js') }}"></script>#}
-{#        <script type="text/javascript" src="{{ asset('js/tilda/tilda-scripts-3.0.min.js') }}"></script>#}
-{#        <script type="text/javascript" src="{{ asset('js/tilda/tilda-blocks-2.7.js') }}"></script>#}
-
     {% endblock %}
 </head>
 <body id="top_page" class="body" style="--envybox-btn-background-color:rgba(255,222,0,0.95);">
@@ -69,9 +55,6 @@
     {% endblock %}
     {% block footer %}
         {% include 'landing/blocks/footer.html.twig' %}
-    {% endblock %}
-    {% block modal %}
-        {% include 'landing/blocks/modal.html.twig' %}
     {% endblock %}
 </div>
 </body>

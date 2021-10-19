@@ -6,6 +6,8 @@ namespace App\Controller;
 
 use App\Service\ReportService;
 use Exception;
+use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
+use Knp\Snappy\Pdf;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -18,7 +20,8 @@ use TypeError;
 class ReportController extends AbstractController
 {
     public function __construct(private ReportService $scannerService,
-    private LoggerInterface $scannerLogger)
+    private LoggerInterface $scannerLogger,
+    private Pdf $pdf)
     {
     }
 
@@ -35,5 +38,16 @@ class ReportController extends AbstractController
             $this->scannerLogger->error($exception);
             return new Response('Сайт не удалось просканировать. Повторите позднее.');
         }
+    }
+
+    #[Route(path: '/pdf/{domain}', name: 'make_pdf', methods: 'GET')]
+    public function makePdf(Request $request, string $domain): PdfResponse
+    {
+
+            $report = $this->scannerService->runScan($domain);
+
+            $test = $this->scannerService->makePdf($request->getSchemeAndHttpHost(),
+                $this->renderView('landing/report/report.html.twig', ['report' => $report, 'year' => date('Y')]));
+            return new PdfResponse($this->pdf->getOutputFromHtml($test), 'report.pdf');
     }
 }
