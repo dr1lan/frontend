@@ -12,15 +12,21 @@ $(document).ready(function () {
                     $('#loader').removeClass('hidden')
                 },
                 success: function (response) {
-                    $.redirect('/report', {
-                        report: response.report
-                    })
+                    if (typeof response.report !== 'undefined' && response.report !== null) {
+                        $.redirect('/report', {
+                            report: response.report
+                        })
+                    } else {
+                        $('.t-form__errorbox-item.js-rule-error').text(response);
+                        $('.t-form__errorbox-bottom').show();
+                    }
                 },
                 complete: function () {
                     $('#loader').addClass('hidden')
                 },
                 error: function (error) {
-                    console.log(error)
+                    $('.t-form__errorbox-item.js-rule-error').text(error.responseText);
+                    $('.t-form__errorbox-bottom').show();
                 }
             });
         } else {
@@ -29,7 +35,7 @@ $(document).ready(function () {
     });
 
     function isValidUrl(url) {
-        let regExp = /(^https?:\/\/)[a-z0-9~_\-\.]+\.[a-z]{2,9}(\/|:|\?[!-~]*)?$/i;
+        let regExp = /[a-zа-я0-9~_\-\.]+\.[a-zа-я]{2,9}(\/|:|\?[!-~]*)?$/i;
 
         return regExp.test(url);
     }

@@ -1,5 +1,11 @@
 monolog:
+    channels: ['scanner']
     handlers:
+        scanner:
+            level: debug
+            type: stream
+            path: "%kernel.logs_dir%/scanner.log"
+            channels: [ scanner ]
         main:
             type: fingers_crossed
             action_level: error

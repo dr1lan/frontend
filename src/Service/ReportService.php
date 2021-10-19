@@ -5,18 +5,17 @@ declare(strict_types=1);
 namespace App\Service;
 
 use Symfony\Component\DomCrawler\Crawler;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class ReportService
 {
-
-    public function __construct()
-    {
-    }
-
-    // todo delete report
     public function runScan(string $domain): string
     {
-        $reportPath = '/home/sveta/output';
+        if (!mb_stristr($domain, 'http')) {
+            $domain = 'http://' . $domain;
+        }
+
+        $reportPath = '/var/tmp/reports';
         $command = "wapiti -u $domain --scope url -o $reportPath";
 
         $result = shell_exec($command);
