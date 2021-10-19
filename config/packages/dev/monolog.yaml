@@ -1,11 +1,16 @@
 monolog:
-    channels: ['scanner']
+    channels: ['scanner', 'mailer']
     handlers:
         scanner:
             level: debug
             type: stream
             path: "%kernel.logs_dir%/scanner.log"
             channels: [scanner]
+        mailer:
+            level: info
+            type: stream
+            path: "%kernel.logs_dir%/mailer.log"
+            channels: [mailer]
         main:
             type: stream
             path: "%kernel.logs_dir%/%kernel.environment%.log"

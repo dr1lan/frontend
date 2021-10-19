@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Заказ звонка специалиста</title>
+</head>
+<body>
+<div>
+    <p>Заявка оставлена на сайте: {{ host }}</p>
+    <p>Адрес страницы, с которой оставлена заявка: {{ host }}</p>
+    <p>Отдел, в который распределяется заявка=d5</p>
+</div>
+<div>
+    <h4>Данные о клиенте:</h4>
+    <p>ФИО: {{ name }}</p>
+    <p>Телефон: {{ phone }}</p>
+</div>
+<div>
+    <h4>Данные о клиенте, определенные по ip-адресу:</h4>
+    <p>Страна: {{ country }}</p>
+    <p>Регион: {{ region }}</p>
+    <p>Город: {{ city }}</p>
+</div>
+</body>
