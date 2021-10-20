@@ -40,14 +40,14 @@ class ReportController extends AbstractController
         }
     }
 
-    #[Route(path: '/pdf/{domain}', name: 'make_pdf', methods: 'GET')]
-    public function makePdf(Request $request, string $domain): PdfResponse
+    #[Route(path: '/pdf', name: 'make_pdf', methods: 'GET')]
+    public function makePdf(Request $request): PdfResponse
     {
-
+        $domain = $request->query->get('domain');
             $report = $this->scannerService->runScan($domain);
 
-            $test = $this->scannerService->makePdf($request->getSchemeAndHttpHost(),
+            $view = $this->scannerService->remakeContentForPdf($request->getSchemeAndHttpHost(),
                 $this->renderView('landing/report/report.html.twig', ['report' => $report, 'year' => date('Y')]));
-            return new PdfResponse($this->pdf->getOutputFromHtml($test), 'report.pdf');
+            return new PdfResponse($this->pdf->getOutputFromHtml($view), 'report.pdf');
     }
 }

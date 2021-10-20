@@ -252,6 +252,10 @@ nav.tabs a.is-active {
     ymaps {
         height: 0 !important;
     }
+
+    a#pdf_link {
+        margin-right: 15px;
+    }
 }
 
 nav.tabs a {
@@ -299,7 +303,7 @@ section pre {
     background: #ffd200;
 }
 
-ul#reference li {
+ul.reference li {
     padding-left: 2rem;
     background-image: url('../images/h1.svg');
     background-position: 0 0;
@@ -308,7 +312,7 @@ ul#reference li {
     margin: 0;
 }
 
-ul#reference {
+ul.reference {
     margin: 0;
     padding: 0;
 }
@@ -473,4 +477,9 @@ ul.efsol_goldUL li {
     .b-stripe.b-stripe_content_item-promo-lede.banner--sl {
         min-height: 350px;
     }
+}
+
+a#pdf_link {
+    float: right;
+    margin-right: 50px;
 }
