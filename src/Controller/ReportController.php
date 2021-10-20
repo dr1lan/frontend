@@ -13,15 +13,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\StreamedResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use TypeError;
 
 class ReportController extends AbstractController
 {
-    public function __construct(private ReportService $scannerService,
-    private LoggerInterface $scannerLogger,
-    private Pdf $pdf)
+    public function __construct(private ReportService   $scannerService,
+                                private LoggerInterface $scannerLogger,
+                                private Pdf             $pdf
+    )
     {
     }
 
@@ -44,10 +44,15 @@ class ReportController extends AbstractController
     public function makePdf(Request $request): PdfResponse
     {
         $domain = $request->query->get('domain');
-            $report = $this->scannerService->runScan($domain);
+        $report = $this->scannerService->runScan($domain);
 
-            $view = $this->scannerService->remakeContentForPdf($request->getSchemeAndHttpHost(),
-                $this->renderView('landing/report/report.html.twig', ['report' => $report, 'year' => date('Y')]));
-            return new PdfResponse($this->pdf->getOutputFromHtml($view), 'report.pdf');
+        $view = $this->scannerService->remakeContentForPdf($request->getSchemeAndHttpHost(),
+            $this->renderView('landing/report/report.html.twig', [
+                'report' => $report,
+                'year' => date('Y'),
+            ]));
+        return new PdfResponse(
+            $this->pdf->getOutputFromHtml($view),
+            'report.pdf');
     }
 }

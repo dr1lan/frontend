@@ -16,8 +16,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class ScannerController extends AbstractController
 {
 
-    public function __construct(private MailService $mailService,
-    private LoggerInterface $mailerLogger)
+    public function __construct(private MailService     $mailService,
+                                private LoggerInterface $mailerLogger
+    )
     {
     }
 
@@ -77,7 +78,7 @@ class ScannerController extends AbstractController
             $phone = $request->get('phone');
 
             $this->mailService->sendMail($name, $phone, $request->getSchemeAndHttpHost(),
-            $request->getClientIp());
+                $request->getClientIp());
             return new JsonResponse([
                 'status' => true
             ]);

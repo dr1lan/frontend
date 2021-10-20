@@ -12,7 +12,8 @@ class MailService
     public function __construct(private MailerInterface $mailer,
                                 private LoggerInterface $mailerLogger,
                                 private string          $from,
-                                private string          $to)
+                                private string          $to
+    )
     {
     }
 
