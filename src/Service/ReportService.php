@@ -35,7 +35,7 @@ class ReportService
         return $crawler->filter('div#page')->html();
     }
 
-    public function remakeContentForPdf(string $domain, string $content): string
+    public function remakeContentForPdf(string $content): string
     {
         $crawler = new Crawler($content);
         $crawler->filter('header')->each(function (Crawler $crawler) {
@@ -50,15 +50,15 @@ class ReportService
             }
         });
 
-        $crawler->filter('link')->each(function (Crawler $crawler) use ($domain) {
+        $crawler->filter('link')->each(function (Crawler $crawler) {
             foreach ($crawler as $node) {
-                $node->setAttribute('href', $domain . $node->getAttribute('href'));
+                $node->setAttribute('href', 'http://localhost:8000' . $node->getAttribute('href'));
             }
         });
 
-        $crawler->filter('script')->each(function (Crawler $crawler) use ($domain) {
+        $crawler->filter('script')->each(function (Crawler $crawler) {
             foreach ($crawler as $node) {
-                $node->setAttribute('src', $domain . $node->getAttribute('src'));
+                $node->setAttribute('src', 'http://localhost:8000' . $node->getAttribute('src'));
             }
         });
 

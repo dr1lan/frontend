@@ -46,8 +46,7 @@ class ReportController extends AbstractController
         $domain = $request->query->get('domain');
         $report = $this->scannerService->runScan($domain);
 
-        $view = $this->scannerService->remakeContentForPdf($request->getSchemeAndHttpHost(),
-            $this->renderView('landing/report/report.html.twig', [
+        $view = $this->scannerService->remakeContentForPdf($this->renderView('landing/report/report.html.twig', [
                 'report' => $report,
                 'year' => date('Y'),
             ]));
