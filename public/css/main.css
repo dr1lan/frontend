@@ -256,6 +256,29 @@ nav.tabs a.is-active {
     a#pdf_link {
         margin-right: 15px;
     }
+
+    img.t503__img {
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        width: 70px !important;
+    }
+
+    div.position-relative.mb-24 {
+        margin-right: 1.5em !important;
+        margin-left: 0.5em !important;
+    }
+
+    div.u-promo-work-list__container div.row {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .u-promo-work-list__container {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
 }
 
 nav.tabs a {
@@ -607,4 +630,25 @@ a#pdf_link {
 #rec262690545 .t-btn:not(.t-animate_no-hover) {
     -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#report_table a, .reference a {
+    color: #D8222D;
+}
+
+#report_table a:hover, .reference a:hover {
+    color: #0f0f0f;
+    text-decoration: underline;
+}
+
+a#pdf_link {
+    display: block;
+    padding-right: 35px;
+    height: 30px;
+    background-image: url('../../images/download.svg');
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: right top;
+    font-weight: bold;
+    color: #D8222D;
 }

@@ -4,18 +4,23 @@ declare(strict_types=1);
 
 namespace App\Service;
 
+use Exception;
 use Symfony\Component\DomCrawler\Crawler;
 
 class ReportService
 {
     public function runScan(string $domain): string
     {
-        if (!mb_stristr($domain, 'http')) {
-            $domain = 'http://' . $domain;
+        $urlPattern = '/((http|https)\:\/\/)?[a-zа-яA-ZА-Я0-9\.\/\?\:@\-_=#]+\.([a-zа-яA-ZА-Я0-9\&\.\/\?\:@\-_=#])*/';
+        if (preg_match($urlPattern, $domain)) {
+            if (!mb_stristr($domain, 'http')) {
+                $domain = 'http://' . $domain;
+            }
+        } else {
+            throw new Exception('Невалидный URL.');
         }
-
         $reportPath = '/var/tmp/reports';
-        $command = "wapiti -u $domain --scope url -o $reportPath";
+        $command = str_replace(';', '', "wapiti -u $domain --scope url -o $reportPath");
 
         $result = shell_exec($command);
 
@@ -57,7 +62,7 @@ class ReportService
             }
         });
 
-        $crawler->filter('a')->each(function (Crawler $crawler) {
+        $crawler->filter('#report_table a')->each(function (Crawler $crawler) {
             foreach ($crawler as $node) {
                 $node->setAttribute('href', "#");
             }
