@@ -476,7 +476,7 @@ table.styles-table td {
 
 .typography-content .h1::before, .typography-content .h2::before,
 .typography-content .h3-yellow-small::after {
-    background: url('../../../images/efsol/h1.svg') no-repeat;
+    background: url('../../public/images/h1.svg') no-repeat;
 }
 
 .typography-content .h3-yellow-small.grey-figure {
@@ -513,15 +513,9 @@ table.styles-table td {
 	font: 14px/130% 'Montserrat', sans-serif!important;
 }
 
-.typography-content ul.efsol_goldUL.green-list li:after {
-	background: url('/images/f/page/solutions/bread/icon/green-list.svg');
-	background-repeat: no-repeat;
-}
-
 .typography-content ul.efsol_goldUL li:after {
-	background: url('/images/f/design/goldUL.svg');
-	background-repeat: no-repeat;
-	background-size: contain;
+    background: url('../../public/images/goldUL.svg') no-repeat;
+    background-size: contain;
 }
 
 .typography-content ul.efsol_goldUL.mb-40 li:after{
@@ -705,7 +699,7 @@ table.styles-table td {
 .modal-header .h3-yellow-small::after{
 	content: "";
     position: absolute;
-    background: url('../../../images/efsol/h1.svg') no-repeat;;
+    background: url('../../public/images/h1.svg') no-repeat;;
     width: 40px;
     height: 20px;
     left: -14px;
@@ -870,7 +864,7 @@ table.styles-table td {
     left: -14px;
 	top: 0;
 	position: absolute;
-    background: url('../../../images/efsol/h1.svg') no-repeat;
+    background: url('../../public/images/h1.svg') no-repeat;
     z-index: -1;
     background-size: contain;
 }
@@ -950,14 +944,14 @@ table.styles-table td {
 /*News&Articles page*/
 
 .news-articles__content .tm-manual_title {
-	background: url('/local/templates/index_new/img/h2_bg.png') 0 18px repeat-x;
+	background: url('../../public/images/h2_bg.png') 0 18px repeat-x;
 	text-align: center;
 }
 
 .news-articles__content .guide-manual-section__demo-content,
 .news-articles__content .guide-manual-section__demo-content,
 .news-articles__content .guide-manual-section__demo-content,
-.news-articles__content .guide-manual-section__demo-content,  {
+.news-articles__content .guide-manual-section__demo-content  {
 	font-family: 'Helvetica', sans-serif;
 }
 
@@ -1200,7 +1194,6 @@ width: 0.5rem !important;
 .news-articles__content .guide-manual-section__demo-content .b-icon_content_block-svg {
 	position: relative;
 	top: -5px;
-    display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
     width: 168px;
@@ -1472,7 +1465,6 @@ width: 0.5rem !important;
     background: #f3f3f9!important;
 }
 .--col-4 {
-    -ms-grid-columns: 1.5fr (1fr)[3];
     grid-template-columns: 1.5fr repeat(3, 1fr);
 }
 .--arrow-sm{
