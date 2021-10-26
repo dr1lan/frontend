@@ -606,6 +606,12 @@ a#pdf_link {
     }
 }
 
+@media screen and (max-width: 1200px){
+    #rec261841122 .tn-elem[data-elem-id="1608103051365"] {
+        left: calc(50% - 600px + 350px) !important;
+    }
+}
+
 #rec261841122 .tn-elem[data-elem-id="1608103051365"] {
     z-index: 1;
     top: -281px;
