@@ -29,3 +29,8 @@ services:
         arguments:
             $from: '%env(resolve:FROM_ADDRESS)%'
             $to: '%env(resolve:TO_ADDRESS)%'
+
+    App\Service\ReportService:
+        class: App\Service\ReportService
+        arguments:
+            $loadUrl: '%env(resolve:LOAD_URL)%'

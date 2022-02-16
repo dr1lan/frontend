@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace App\Service;
 
 use Exception;
@@ -9,6 +7,10 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class ReportService
 {
+    public function __construct(private string $loadUrl)
+    {
+    }
+
     public function runScan(string $domain): string
     {
         $urlPattern = '/((http|https)\:\/\/)?[a-zа-яA-ZА-Я0-9\.\/\?\:@\-_=#]+\.([a-zа-яA-ZА-Я0-9\&\.\/\?\:@\-_=#])*/';
@@ -52,13 +54,13 @@ class ReportService
 
         $crawler->filter('link')->each(function (Crawler $crawler) {
             foreach ($crawler as $node) {
-                $node->setAttribute('href', 'http://localhost:8000' . $node->getAttribute('href'));
+                $node->setAttribute('href', $this->loadUrl . $node->getAttribute('href'));
             }
         });
 
         $crawler->filter('script')->each(function (Crawler $crawler) {
             foreach ($crawler as $node) {
-                $node->setAttribute('src', 'http://localhost:8000' . $node->getAttribute('src'));
+                $node->setAttribute('src', $this->loadUrl . $node->getAttribute('src'));
             }
         });
 

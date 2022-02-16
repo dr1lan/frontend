@@ -18,9 +18,9 @@ use TypeError;
 
 class ReportController extends AbstractController
 {
-    public function __construct(private ReportService   $scannerService,
+    public function __construct(private ReportService $scannerService,
                                 private LoggerInterface $scannerLogger,
-                                private Pdf             $pdf
+                                private Pdf $pdf
     )
     {
     }
@@ -41,17 +41,23 @@ class ReportController extends AbstractController
     }
 
     #[Route(path: '/pdf', name: 'make_pdf', methods: 'GET')]
-    public function makePdf(Request $request): PdfResponse
+    public function makePdf(Request $request): Response
     {
-        $domain = $request->query->get('domain');
-        $report = $this->scannerService->runScan($domain);
+        try {
+            $domain = $request->query->get('domain');
+            $report = $this->scannerService->runScan($domain);
 
-        $view = $this->scannerService->remakeContentForPdf($this->renderView('landing/report/report.html.twig', [
+            $view = $this->scannerService->remakeContentForPdf($this->renderView('landing/report/report.html.twig', [
                 'report' => $report,
                 'year' => date('Y'),
             ]));
-        return new PdfResponse(
-            $this->pdf->getOutputFromHtml($view),
-            'report.pdf');
+            return new PdfResponse(
+                $this->pdf->getOutputFromHtml($view),
+                'report.pdf');
+        } catch (Exception $exception) {
+            $this->scannerLogger->error($exception);
+
+            return new Response($exception->getMessage());
+        }
     }
 }
